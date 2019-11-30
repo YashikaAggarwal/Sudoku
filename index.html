@@ -1,0 +1,209 @@
+<html>
+
+<head>
+    <title>SUDOKU</title>
+    <link rel="icon" type="image/png" href="favicon2.png">
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="Sudoku.css">
+    <script src="Sudoku.js" type="text/javascript"></script>
+    <script src="jquery-1.8.2.min.js"></script>
+    <script type="text/javascript">
+
+    </script>
+</head>
+
+<body>
+    <center>
+        <h1 style="font-size: 80px; margin-bottom: 15px; font-weight: bolder;">SUDOKU</h1>
+    </center>
+    <div id="popup" class="buttons"><input type="button" value="PLAY NOW" class="btn" onclick="NewGame();" id="table-board"></div>
+    <div class="main hide" id="main">
+        <table border="0" width="450" height="450" align="center">
+            <tr>
+                <td>
+                    <table border="1" width="150" rules="all" height="150">
+                        <tr>
+                            <td><input type="text" class="box" id="00" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                            <td><input type="text" class="box" id="01" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                            <td><input type="text" class="box" id="02" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" class="box" id="10" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                            <td><input type="text" class="box" id="11" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                            <td><input type="text" class="box" id="12" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" class="box" id="20" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                            <td><input type="text" class="box" id="21" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                            <td><input type="text" class="box" id="22" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                        </tr>
+                    </table>
+                </td>
+                <td>
+                    <table border="1" width="150" height="150">
+                        <tr>
+                            <td><input type="text" class="box" id="03" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                            <td><input type="text" class="box" id="04" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                            <td><input type="text" class="box" id="05" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" class="box" id="13" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                            <td><input type="text" class="box" id="14" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                            <td><input type="text" class="box" id="15" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" class="box" id="23" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                            <td><input type="text" class="box" id="24" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                            <td><input type="text" class="box" id="25" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                        </tr>
+                    </table>
+                </td>
+                <td>
+                    <table border="1" width="150" height="150">
+                        <tr>
+                            <td><input type="text" class="box" id="06" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                            <td><input type="text" class="box" id="07" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                            <td><input type="text" class="box" id="08" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" class="box" id="16" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                            <td><input type="text" class="box" id="17" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                            <td><input type="text" class="box" id="18" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" class="box" id="26" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                            <td><input type="text" class="box" id="27" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                            <td><input type="text" class="box" id="28" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table border="1" width="150" height="150">
+                        <tr>
+                            <td><input type="text" class="box" id="30" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                            <td><input type="text" class="box" id="31" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                            <td><input type="text" class="box" id="32" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" class="box" id="40" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                            <td><input type="text" class="box" id="41" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                            <td><input type="text" class="box" id="42" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" class="box" id="50" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                            <td><input type="text" class="box" id="51" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                            <td><input type="text" class="box" id="52" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                        </tr>
+                    </table>
+                </td>
+                <td>
+                    <table border="1" width="150" height="150">
+                        <tr>
+                            <td><input type="text" class="box" id="33" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                            <td><input type="text" class="box" id="34" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                            <td><input type="text" class="box" id="35" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" class="box" id="43" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                            <td><input type="text" class="box" id="44" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                            <td><input type="text" class="box" id="45" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" class="box" id="53" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                            <td><input type="text" class="box" id="54" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                            <td><input type="text" class="box" id="55" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                        </tr>
+                    </table>
+                </td>
+                <td>
+                    <table border="1" width="150" height="150">
+                        <tr>
+                            <td><input type="text" class="box" id="36" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                            <td><input type="text" class="box" id="37" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                            <td><input type="text" class="box" id="38" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" class="box" id="46" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                            <td><input type="text" class="box" id="47" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                            <td><input type="text" class="box" id="48" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" class="box" id="56" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                            <td><input type="text" class="box" id="57" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                            <td><input type="text" class="box" id="58" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table border="1" width="150" height="150">
+                        <tr>
+                            <td><input type="text" class="box" id="60" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                            <td><input type="text" class="box" id="61" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                            <td><input type="text" class="box" id="62" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" class="box" id="70" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                            <td><input type="text" class="box" id="71" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                            <td><input type="text" class="box" id="72" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" class="box" id="80" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                            <td><input type="text" class="box" id="81" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                            <td><input type="text" class="box" id="82" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                        </tr>
+                    </table>
+                </td>
+                <td>
+                    <table border="1" width="150" height="150">
+                        <tr>
+                            <td><input type="text" class="box" id="63" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                            <td><input type="text" class="box" id="64" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                            <td><input type="text" class="box" id="65" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" class="box" id="73" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                            <td><input type="text" class="box" id="74" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                            <td><input type="text" class="box" id="75" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" class="box" id="83" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                            <td><input type="text" class="box" id="84" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                            <td><input type="text" class="box" id="85" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                        </tr>
+                    </table>
+                </td>
+                <td>
+                    <table border="1" width="150" height="150">
+                        <tr>
+                            <td><input type="text" class="box" id="66" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                            <td><input type="text" class="box" id="67" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                            <td><input type="text" class="box" id="68" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" class="box" id="76" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                            <td><input type="text" class="box" id="77" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                            <td><input type="text" class="box" id="78" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" class="box" id="86" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                            <td><input type="text" class="box" id="87" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                            <td><input type="text" class="box" id="88" onblur="doType(this,this.id);" onchange="doCongrats();"></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="buttons hide" id="btm">
+        <input type="button" value="Prev Game" class="btn" onclick="Prev();" style="margin-right: 0px;float: left;margin-left: 150px">
+        <input type="button" value="Next Game" class="btn" onclick="NewGame();" style="margin-left: 50px;">
+        <input type="button" value="Restart Current Game" class="btn" onclick="Restart();" style="margin-left: 50px; cursor: not-allowed" id="restart" disabled>
+    </div>
+</body>
+
+</html>
