@@ -1,0 +1,102 @@
+body {
+    background-image: url(brown-background-wallpaper-13.jpg);
+    background-size: cover;
+    cursor: default;
+}
+
+h1 {
+    color: #65350f;
+}
+
+.hide {
+    display: none;
+}
+
+.main {
+    height: 600px;
+    width: 600px;
+    margin: auto;
+
+}
+
+table {
+    background-color: bisque;
+    border: 4px solid #65350f;
+    box-sizing: border-box;
+}
+
+input[type="text"] {
+    background-color: bisque;
+    border: 0px;
+}
+
+input[type="text"]:disabled {
+
+    color: brown;
+    background-color: #f4c493;
+}
+
+input[type="text"]:focus {
+    border: 3px solid saddlebrown;
+}
+
+.buttons {
+    margin-top: -80px;
+    margin-left: 25%;
+}
+
+input[type="text"] {
+    width: 50px;
+    height: 50px;
+    font-size: 35px;
+    text-align: center;
+    caret-color: transparent;
+    cursor: pointer;
+}
+
+.btn {
+    background-color: #65350f;
+    color: white;
+    width: inline;
+    height: 46px;
+    padding: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    float: left;
+    text-align: center;
+    margin: 10px 0px 0px 225px;
+}
+
+.btn:hover {
+    background-color: #352315;
+    color: white;
+    transition: 0s;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+#popup {
+    width: 1250px;
+    margin-left: auto;
+    margin-top: 100px;
+    float: none;
+}
+
+#table-board {
+    width: 500px;
+    height: 200px;
+    font-size: 75px;
+    border-radius: 60px;
+    font-weight: 500;
+    background-color: #65350f;
+}
+
+#table-board:hover {
+    background-color: #352315;
+    color: white;
+    font-weight: 500;
+    box-shadow: 0px 0px 5px 5px #9a7b4f;
+    transition: 0s;
+}
