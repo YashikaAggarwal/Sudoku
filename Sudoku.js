@@ -228,6 +228,8 @@ function Restart() {
 }
 
 function doType(ref, id) {
+    
+    
     for (i = 0; i < 9; i++) {
         for (j = 0; j < 9; j++) {
             if (document.getElementById(i + "" + j).style.backgroundColor == "red")
@@ -239,6 +241,13 @@ function doType(ref, id) {
 
         }
     }
+    
+    
+    var con = confirm("Are you sure of your choice ?") ;
+    if(con == false){
+        document.getElementById(id[0]+""+id[1]).style.backgroundColor = "lightblue" ;
+    }
+    
     var flag = 0;
     for (i = 0; i < 9; i++) {
         /*----------------------Checking if present in same row-----------------*/
@@ -284,6 +293,7 @@ function doType(ref, id) {
         }
 
     }
+    
 
     /*----------------------------Checking if fully solved---------------------------*/
     var check1 = 1;
