@@ -243,7 +243,7 @@ function doType(ref, id) {
     }
     
     
-    var con = confirm("Are you sure of your choice ?") ;
+    var con = alert("Are you sure of your choice ?") ;
     if(con == false){
         document.getElementById(id[0]+""+id[1]).style.backgroundColor = "lightblue" ;
     }
